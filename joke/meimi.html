@@ -5,6 +5,101 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meimi</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #16262E;
+    }
+
+    .box {
+      position: relative;
+      width: 70vmin;
+      max-width: 40vw;
+      height: 70vmin;
+      max-height: 40vw;
+      background: url('https://i.gyazo.com/9704fc961dab616f5f651cc41b04f1d4.png') center center no-repeat;
+      background-size: cover;
+      color: white;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+
+    .box:nth-of-type(n+2) {
+      margin-left: 10vmin;
+    }
+
+    .title-info-wrapper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform: translate3d(0, 0, 0);
+      transition: transform .25s ease;
+    }
+
+    .title {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 2vmin;
+      text-align: center;
+      font-size: 3vmin;
+      background-color: rgba(#3C7A89, .8);
+    }
+
+    .info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(#3C7A89, .8);
+      padding: 2vmin;
+    }
+
+    .box--horizontal {
+      .info {
+        transform: translate3d(100%, 0, 0);
+      }
+    }
+
+    .box--vertical {
+      .title {
+        transform: translate3d(0, 0, 0);
+        transition: transform .25s ease;
+      }
+
+      .info {
+        transition: transform .25s ease;
+        transform: translate3d(0, 100%, 0);
+      }
+    }
+
+    .box--horizontal:hover .title-info-wrapper {
+      transform: translate3d(-100%, 0, 0);
+    }
+
+    .box--vertical:hover {
+      .title {
+        transform: translate3d(0, -100%, 0);
+      }
+
+      .info {
+        transform: translate3d(0, 0, 0);
+      }
+    }
+  </style>
 </head>
 
 <body>
