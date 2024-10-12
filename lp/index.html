@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>なる - エンジニア / イベント司会</title>
+  <title>なる - コーチングDXツール開発者 / イベント司会</title>
   <style>
     * {
       margin: 0;
@@ -26,9 +26,8 @@
       padding: 40px;
       border-radius: 20px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      max-width: 600px;
+      max-width: 700px;
       width: 90%;
-      text-align: center;
     }
 
     .profile-img {
@@ -36,7 +35,8 @@
       height: 150px;
       border-radius: 50%;
       object-fit: cover;
-      margin-bottom: 20px;
+      margin: 0 auto 20px;
+      display: block;
       border: 5px solid #fff;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
@@ -45,12 +45,14 @@
       font-size: 28px;
       margin-bottom: 10px;
       color: #2c3e50;
+      text-align: center;
     }
 
     .tagline {
       font-size: 18px;
       color: #7f8c8d;
       margin-bottom: 20px;
+      text-align: center;
     }
 
     .bio {
@@ -58,6 +60,7 @@
       line-height: 1.6;
       margin-bottom: 30px;
       color: #34495e;
+      text-align: center;
     }
 
     .section {
@@ -71,28 +74,45 @@
       text-align: left;
     }
 
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .tag {
+      background-color: #e0f2fe;
+      color: #0369a1;
+      padding: 5px 10px;
+      border-radius: 15px;
+      font-size: 14px;
+    }
+
     .links {
       display: flex;
       flex-wrap: wrap;
       gap: 15px;
-      justify-content: flex-start;
+      justify-content: center;
     }
 
     .link-btn {
       display: inline-flex;
       align-items: center;
       padding: 10px 20px;
-      background-color: #3498db;
-      color: #fff;
+      color: #333;
       text-decoration: none;
       border-radius: 30px;
       transition: all 0.3s ease;
       font-weight: bold;
+      background-color: #f0f0f0;
     }
 
     .link-btn:hover {
       transform: translateY(-3px);
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      background-color: #e0e0e0;
     }
 
     .link-btn img {
@@ -110,6 +130,8 @@
       margin-bottom: 15px;
       text-align: left;
       transition: all 0.3s ease;
+      text-decoration: none;
+      color: inherit;
     }
 
     .service-card:hover {
@@ -138,46 +160,56 @@
       font-style: italic;
       color: #95a5a6;
       margin-top: 20px;
+      text-align: center;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <img src="/icon/naru_icon.jpeg" alt="なるのプロフィール画像" class="profile-img">
+    <img src="https://naru20181117.github.io/lp/icon/naru_icon.jpeg" alt="なるのプロフィール画像" class="profile-img">
     <h1>なる</h1>
     <p class="tagline">フリーランスエンジニア / イベント司会</p>
     <p class="bio">
-      brighty.site と ideee.tech の製作者<br>
-      エンジニア向けイベントが好きで、司会もします<br>
+      福岡出身の1時のパパ<br>
+      「もったいないをITの力で無くす」をモットーにサービスを作り続ける<br>
       主催：<a href="https://japanglish.connpass.com" target="_blank">Japanglish</a>
     </p>
+    
+    <div class="tags">
+      <span class="tag">エンジニア</span>
+      <span class="tag">個人開発</span>
+      <span class="tag">英語</span>
+      <span class="tag">イベント運営</span>
+      <span class="tag">SNSマーケティング</span>
+      <span class="tag">エンジニア採用</span>
+    </div>
     
     <div class="section">
       <h2 class="section-title">SNS</h2>
       <div class="links">
         <a href="https://x.com/1026NT" class="link-btn" target="_blank">
-          <img src="/icon/x-icon.png" alt="X icon" aria-hidden="true"> X
+          <img src="https://naru20181117.github.io/lp/icon/x-icon.png" alt="X icon" aria-hidden="true"> X
         </a>
         <a href="https://www.facebook.com/naruhiro.tsukazaki/" class="link-btn" target="_blank">
-          <img src="/icon/facebook-icon.png" alt="Facebook icon" aria-hidden="true"> Facebook
+          <img src="https://naru20181117.github.io/lp/icon/facebook-icon.png" alt="Facebook icon" aria-hidden="true"> Facebook
         </a>
       </div>
     </div>
     
     <div class="section">
-      <h2 class="section-title">自社サービス</h2>
+      <h2 class="section-title">コーチングDXツール</h2>
       <a href="https://ideee.tech/" class="service-card" target="_blank">
-        <img src="/icon/ideee.png" alt="ideee icon" class="service-icon">
+        <img src="https://naru20181117.github.io/lp/icon/ideee.png" alt="ideee icon" class="service-icon">
         <div class="service-info">
           <h3>ideee</h3>
           <p>エンジニアのアイデアを形にするプラットフォーム</p>
         </div>
       </a>
       <a href="https://brighty.site/" class="service-card" target="_blank">
-        <img src="/icon/brighty.png" alt="Brighty icon" class="service-icon">
+        <img src="https://naru20181117.github.io/lp/icon/brighty.png" alt="Brighty icon" class="service-icon">
         <div class="service-info">
           <h3>Brighty</h3>
-          <p>IT人材のためのキャリアコーチングサービス</p>
+          <p>コーチングDXツール</p>
         </div>
       </a>
     </div>
