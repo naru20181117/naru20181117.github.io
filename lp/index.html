@@ -26,7 +26,7 @@
       padding: 40px;
       border-radius: 20px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      max-width: 500px;
+      max-width: 600px;
       width: 90%;
       text-align: center;
     }
@@ -60,12 +60,22 @@
       color: #34495e;
     }
 
+    .section {
+      margin-bottom: 30px;
+    }
+
+    .section-title {
+      font-size: 20px;
+      color: #2c3e50;
+      margin-bottom: 15px;
+      text-align: left;
+    }
+
     .links {
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
       gap: 15px;
-      margin-bottom: 30px;
+      justify-content: flex-start;
     }
 
     .link-btn {
@@ -85,8 +95,43 @@
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
 
-    .link-btn i {
+    .link-btn img {
+      width: 24px;
+      height: 24px;
       margin-right: 10px;
+    }
+
+    .service-card {
+      display: flex;
+      align-items: center;
+      background-color: #f8f9fa;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 15px;
+      text-align: left;
+      transition: all 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-icon {
+      width: 50px;
+      height: 50px;
+      margin-right: 15px;
+    }
+
+    .service-info h3 {
+      font-size: 18px;
+      margin-bottom: 5px;
+      color: #2c3e50;
+    }
+
+    .service-info p {
+      font-size: 14px;
+      color: #7f8c8d;
     }
 
     .motto {
@@ -95,11 +140,10 @@
       margin-top: 20px;
     }
   </style>
-  <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="container">
-    <img src="/placeholder.svg?height=150&width=150" alt="なるのプロフィール画像" class="profile-img">
+    <img src="/icons/naru_icon.jpeg" alt="なるのプロフィール画像" class="profile-img">
     <h1>なる</h1>
     <p class="tagline">フリーランスエンジニア / イベント司会</p>
     <p class="bio">
@@ -107,20 +151,37 @@
       エンジニア向けイベントが好きで、司会もします<br>
       主催：<a href="https://japanglish.connpass.com" target="_blank">Japanglish</a>
     </p>
-    <div class="links">
-      <a href="https://x.com/1026NT" class="link-btn" target="_blank">
-        <i class="fab fa-x"></i> X
+    
+    <div class="section">
+      <h2 class="section-title">SNS</h2>
+      <div class="links">
+        <a href="https://x.com/1026NT" class="link-btn" target="_blank">
+          <img src="/icons/x-icon.png" alt="X icon" aria-hidden="true"> X
+        </a>
+        <a href="https://www.facebook.com/naruhiro.tsukazaki/" class="link-btn" target="_blank">
+          <img src="/icons/facebook-icon.png" alt="Facebook icon" aria-hidden="true"> Facebook
+        </a>
+      </div>
+    </div>
+    
+    <div class="section">
+      <h2 class="section-title">自社サービス</h2>
+      <a href="https://ideee.tech/" class="service-card" target="_blank">
+        <img src="/icons/ideee.png" alt="ideee icon" class="service-icon">
+        <div class="service-info">
+          <h3>ideee</h3>
+          <p>エンジニアのアイデアを形にするプラットフォーム</p>
+        </div>
       </a>
-      <a href="https://www.facebook.com/naruhiro.tsukazaki/" class="link-btn" target="_blank">
-        <i class="fab fa-facebook"></i> Facebook
-      </a>
-      <a href="https://ideee.tech/" class="link-btn" target="_blank">
-        <i class="fas fa-laptop-code"></i> ideee
-      </a>
-      <a href="https://brighty.site/" class="link-btn" target="_blank">
-        <i class="fas fa-lightbulb"></i> Brighty
+      <a href="https://brighty.site/" class="service-card" target="_blank">
+        <img src="/icons/brighty.png" alt="Brighty icon" class="service-icon">
+        <div class="service-info">
+          <h3>Brighty</h3>
+          <p>IT人材のためのキャリアコーチングサービス</p>
+        </div>
       </a>
     </div>
+    
     <p class="motto">個人モットー：世の中の「もったいない」をITの力で無くす🚀</p>
   </div>
 </body>
